@@ -1,0 +1,27 @@
+@import '../theme/index';
+md-toolbar {
+    color           : $light;
+    padding         : 0 $gap;
+    background-color: $primary;
+}
+.fill-x {
+    flex: 1 1 auto;
+}
+nav {
+    margin-left     : -500px;
+    width           : 280px;
+    position        : fixed;
+    top             : 65px;
+    left            : 0;
+    background-color: $light;
+    z-index         : $above;
+}
+nav a {
+    text-align: left;
+    display   : block;
+    width     : $all;
+    z-index   : $clouds !important;
+}
+nav.open {
+    margin-left: 0;
+}

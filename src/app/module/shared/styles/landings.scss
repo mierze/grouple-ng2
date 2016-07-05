@@ -1,0 +1,8 @@
+@import '../../../../theme/index';
+button {
+    width           : 90%;
+    padding         : $some-dynamic;
+    background-color: $secondary;
+    color           : $light;
+    margin          : $some-dynamic $space-dynamic;
+}
