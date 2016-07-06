@@ -1,0 +1,52 @@
+{
+  "name": "@angular2-material/list",
+  "version": "2.0.0-alpha.5-3",
+  "description": "Angular 2 Material list",
+  "main": "./list.js",
+  "typings": "./list.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/material2.git"
+  },
+  "keywords": [
+    "angular",
+    "material",
+    "material design",
+    "components",
+    "list"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angular/material2/issues"
+  },
+  "homepage": "https://github.com/angular/material2#readme",
+  "peerDependencies": {
+    "@angular2-material/core": "2.0.0-alpha.5-3"
+  },
+  "_id": "@angular2-material/list@2.0.0-alpha.5-3",
+  "scripts": {},
+  "_shasum": "9db81e2c1f7240d7866f33a0c99adb0ab7d786ca",
+  "_from": "@angular2-material/list@2.0.0-alpha.5-3",
+  "_resolved": "https://registry.npmjs.org/@angular2-material/list/-/list-2.0.0-alpha.5-3.tgz",
+  "_npmVersion": "3.8.7",
+  "_nodeVersion": "4.1.2",
+  "_npmUser": {
+    "name": "angular2-material",
+    "email": "angular-core+npm@google.com"
+  },
+  "dist": {
+    "shasum": "9db81e2c1f7240d7866f33a0c99adb0ab7d786ca",
+    "tarball": "https://registry.npmjs.org/@angular2-material/list/-/list-2.0.0-alpha.5-3.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "angular2-material",
+      "email": "angular-core+npm@google.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/list-2.0.0-alpha.5-3.tgz_1467296855094_0.41982538695447147"
+  },
+  "directories": {}
+}

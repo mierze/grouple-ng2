@@ -1,0 +1,25 @@
+<md-toolbar class="nav">
+  <button md-icon-button (click)="showMenu = showMenu ? false:true">
+    <md-icon>menu</md-icon>
+  </button>
+  <span class="title">{{title}}</span>
+  <span class="fill-x"></span>
+  <button md-icon-button>
+    <md-icon>settings</md-icon>
+  </button>
+</md-toolbar>
+
+<nav [ngClass]="{'open': showMenu}">
+  <a md-button (click)="showMenu = showMenu? false: true" [routerLink]="['/']">
+    <md-icon>home</md-icon>Home</a>
+  <a md-button (click)="showMenu = showMenu? false: true" [routerLink]="['/groups']">
+    <md-icon>group</md-icon>Groups</a>
+  <a md-button (click)="showMenu = showMenu? false: true" [routerLink]="['/events']">
+    <md-icon>event</md-icon>Events</a>
+  <a md-button (click)="showMenu = showMenu? false: true" [routerLink]="['/user-profile']">
+    <md-icon>person</md-icon>Profile</a>
+  <a md-button (click)="showMenu = showMenu? false: true" [routerLink]="['/user-profile']">
+    <md-icon>logout</md-icon>Logout</a>
+</nav>
+
+<router-outlet></router-outlet>

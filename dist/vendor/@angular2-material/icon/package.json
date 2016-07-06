@@ -1,0 +1,53 @@
+{
+  "name": "@angular2-material/icon",
+  "version": "2.0.0-alpha.5-3",
+  "description": "Angular 2 Material icon",
+  "main": "./icon.js",
+  "typings": "./icon.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/material2.git"
+  },
+  "keywords": [
+    "angular",
+    "material",
+    "material design",
+    "components",
+    "icon"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angular/material2/issues"
+  },
+  "homepage": "https://github.com/angular/material2#readme",
+  "peerDependencies": {
+    "@angular/http": "2.0.0-rc.3",
+    "@angular2-material/core": "2.0.0-alpha.5-3"
+  },
+  "_id": "@angular2-material/icon@2.0.0-alpha.5-3",
+  "scripts": {},
+  "_shasum": "319d56d8eb88af5d4b0bb862fc06c0043201f02d",
+  "_from": "@angular2-material/icon@2.0.0-alpha.5-3",
+  "_resolved": "https://registry.npmjs.org/@angular2-material/icon/-/icon-2.0.0-alpha.5-3.tgz",
+  "_npmVersion": "3.8.7",
+  "_nodeVersion": "4.1.2",
+  "_npmUser": {
+    "name": "angular2-material",
+    "email": "angular-core+npm@google.com"
+  },
+  "dist": {
+    "shasum": "319d56d8eb88af5d4b0bb862fc06c0043201f02d",
+    "tarball": "https://registry.npmjs.org/@angular2-material/icon/-/icon-2.0.0-alpha.5-3.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "angular2-material",
+      "email": "angular-core+npm@google.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/icon-2.0.0-alpha.5-3.tgz_1467296845605_0.5539327024016529"
+  },
+  "directories": {}
+}

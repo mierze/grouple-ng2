@@ -1,0 +1,1 @@
+/Users/brettstetson/Documents/workspaces/other/grouple/src/app/module/event/list/event-list.js
