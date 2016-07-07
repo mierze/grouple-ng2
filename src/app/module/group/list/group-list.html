@@ -1,0 +1,9 @@
+<div>
+    <!-- <group-row ng-repeat="item in vm.items"></group-row> -->
+    <!-- <sad-guy ng-show='vm.sadGuy'></sad-guy> -->
+    <ul>
+        <li *ngFor="let group of groups | async">
+            {{group.name}}
+        </li>
+    </ul>
+</div>

@@ -6,6 +6,7 @@
 
 var Angular2App = require('angular-cli/lib/broccoli/angular2-app');
 var compileSass = require('broccoli-sass');
+
 var mergeTrees = require('broccoli-merge-trees');
 var _ = require('lodash');
 var glob = require('glob');
@@ -26,7 +27,9 @@ module.exports = function(defaults) {
             'reflect-metadata/**/*.+(ts|js|js.map)',
             'rxjs/**/*.+(js|js.map)',
             '@angular/**/*.+(js|js.map)',
-            '@angular2-material/**/*'
+            '@angular2-material/**/*',
+            'angularfire2/**/*.js',
+            'firebase/*.js'
         ]
     });
     return mergeTrees([appTree], {

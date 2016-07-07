@@ -1,0 +1,1 @@
+/Users/brettstetson/Documents/workspaces/other/grouple/tmp/vendor-input_base_path-mrAGTG8R.tmp/0/angularfire2/providers/firebase_sdk_auth_backend.js
