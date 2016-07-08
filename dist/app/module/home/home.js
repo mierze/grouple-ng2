@@ -17,6 +17,7 @@ var Home = (function () {
     function Home(af) {
         this.title = 'Grouple';
         this.items = af.database.list('messages');
+        this.users = af.database.list('users');
     }
     Home.prototype.addItem = function () {
         this.items.push({ data: this.msg });

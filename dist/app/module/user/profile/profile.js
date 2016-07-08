@@ -10,9 +10,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var angularfire2_1 = require('angularfire2');
+var router_1 = require('@angular/router');
 var UserProfile = (function () {
-    function UserProfile(af) {
-        this.user = af.database.object('users/1');
+    function UserProfile(route, router, af) {
+        var _this = this;
+        this.route = route;
+        this.router = router;
+        this.sub = this.route.params.subscribe(function (params) {
+            var id = +params['id']; // (+) converts string 'id' to a number
+            _this.user = af.database.object('users/' + id);
+        });
         // alert(JSON.stringify(this.user));
     }
     UserProfile = __decorate([
@@ -21,7 +28,7 @@ var UserProfile = (function () {
             templateUrl: 'profile.html',
             styleUrls: ['profile.css', '../../shared/styles/buttons.css']
         }), 
-        __metadata('design:paramtypes', [angularfire2_1.AngularFire])
+        __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, angularfire2_1.AngularFire])
     ], UserProfile);
     return UserProfile;
 }());

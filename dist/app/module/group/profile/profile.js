@@ -14,7 +14,9 @@ var GroupProfile = (function () {
     }
     GroupProfile = __decorate([
         core_1.Component({
-            templateUrl: 'app/module/group/profile/profile.html'
+            moduleId: module.id,
+            templateUrl: 'profile.html',
+            styleUrls: ['profile.css', '../../shared/styles/buttons.css']
         }), 
         __metadata('design:paramtypes', [])
     ], GroupProfile);

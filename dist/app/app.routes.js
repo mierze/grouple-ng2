@@ -7,7 +7,7 @@ exports.routes = [
     { path: '', component: index_1.Home },
     { path: 'groups', component: index_1.GroupsLanding },
     { path: 'events', component: index_1.EventsLanding },
-    { path: 'user-profile', component: index_1.UserProfile },
+    { path: 'user-profile/:id', component: index_1.UserProfile },
     { path: 'group-profile', component: index_1.GroupProfile },
     { path: 'event-profile', component: index_1.EventProfile },
     { path: 'group-list', component: index_1.GroupList },

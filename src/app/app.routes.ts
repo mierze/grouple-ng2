@@ -7,7 +7,7 @@ export const routes: RouterConfig = [
     { path: '', component: Home },
     { path: 'groups', component: GroupsLanding },
     { path: 'events', component: EventsLanding },
-    { path: 'user-profile', component: UserProfile },
+    { path: 'user-profile/:id', component: UserProfile },
     { path: 'group-profile', component: GroupProfile },
     { path: 'event-profile', component: EventProfile },
     { path: 'group-list', component: GroupList },

@@ -12,7 +12,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var core_1 = require('@angular/core');
-var forms_1 = require('@angular/forms');
+var common_1 = require('@angular/common');
 var unique_selection_dispatcher_1 = require('@angular2-material/core/coordination/unique-selection-dispatcher');
 // Re-exports.
 var unique_selection_dispatcher_2 = require('@angular2-material/core/coordination/unique-selection-dispatcher');
@@ -21,7 +21,7 @@ exports.MdUniqueSelectionDispatcher = unique_selection_dispatcher_2.MdUniqueSele
  * Provider Expression that allows md-radio-group to register as a ControlValueAccessor. This
  * allows it to support [(ngModel)] and ngControl.
  */
-exports.MD_RADIO_GROUP_CONTROL_VALUE_ACCESSOR = new core_1.Provider(forms_1.NG_VALUE_ACCESSOR, {
+exports.MD_RADIO_GROUP_CONTROL_VALUE_ACCESSOR = new core_1.Provider(common_1.NG_VALUE_ACCESSOR, {
     useExisting: core_1.forwardRef(function () { return MdRadioGroup; }),
     multi: true
 });

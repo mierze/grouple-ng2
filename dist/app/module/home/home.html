@@ -25,6 +25,14 @@
         <li>
             sample item
         </li>
+        <li *ngFor="let user of users | async">
+            <a [routerLink]="['user-profile', user.$key]">{{user.name}}</a>
+        </li>
+    </ul>
+    <ul >
+        <li>
+            sample item
+        </li>
         <li *ngFor="let item of items | async">
             {{item.data}} <button (click)="removeItem(item.$key)">x</button>
         </li>

@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var testing_1 = require('@angular/core/testing');
-var forms_1 = require('@angular/forms');
+var common_1 = require('@angular/common');
 var testing_2 = require('@angular/compiler/testing');
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
@@ -19,8 +19,6 @@ testing_1.describe('MdRadio', function () {
     var builder;
     var dispatcher;
     testing_1.beforeEachProviders(function () { return [
-        forms_1.disableDeprecatedForms(),
-        forms_1.provideForms(),
         core_1.provide(unique_selection_dispatcher_1.MdUniqueSelectionDispatcher, { useFactory: function () {
                 dispatcher = new unique_selection_dispatcher_1.MdUniqueSelectionDispatcher();
                 return dispatcher;
@@ -194,7 +192,7 @@ testing_1.describe('MdRadio', function () {
                 groupDebugElement = fixture.debugElement.query(platform_browser_1.By.directive(radio_1.MdRadioGroup));
                 groupNativeElement = groupDebugElement.nativeElement;
                 groupInstance = groupDebugElement.injector.get(radio_1.MdRadioGroup);
-                groupNgControl = groupDebugElement.injector.get(forms_1.NgControl);
+                groupNgControl = groupDebugElement.injector.get(common_1.NgControl);
                 radioDebugElements = fixture.debugElement.queryAll(platform_browser_1.By.directive(radio_1.MdRadioButton));
                 radioNativeElements = radioDebugElements.map(function (debugEl) { return debugEl.nativeElement; });
                 radioInstances = radioDebugElements.map(function (debugEl) { return debugEl.componentInstance; });
@@ -225,7 +223,7 @@ testing_1.describe('MdRadio', function () {
             }
             expect(groupInstance.selected.value).toBe(groupInstance.value);
         });
-        testing_1.it('should have the correct control state initially and after interaction', testing_1.fakeAsync(function () {
+        testing_1.it('should have the correct ngControl state initially and after interaction', testing_1.fakeAsync(function () {
             // The control should start off valid, pristine, and untouched.
             expect(groupNgControl.valid).toBe(true);
             expect(groupNgControl.pristine).toBe(true);
@@ -271,7 +269,7 @@ testing_1.describe('MdRadio', function () {
                 groupDebugElement = fixture.debugElement.query(platform_browser_1.By.directive(radio_1.MdRadioGroup));
                 groupNativeElement = groupDebugElement.nativeElement;
                 groupInstance = groupDebugElement.injector.get(radio_1.MdRadioGroup);
-                groupNgControl = groupDebugElement.injector.get(forms_1.NgControl);
+                groupNgControl = groupDebugElement.injector.get(common_1.NgControl);
                 radioDebugElements = fixture.debugElement.queryAll(platform_browser_1.By.directive(radio_1.MdRadioButton));
                 radioNativeElements = radioDebugElements.map(function (debugEl) { return debugEl.nativeElement; });
                 radioInstances = radioDebugElements.map(function (debugEl) { return debugEl.componentInstance; });
@@ -410,7 +408,7 @@ var RadioGroupWithNgModel = (function () {
     }
     RadioGroupWithNgModel = __decorate([
         core_1.Component({
-            directives: [radio_1.MD_RADIO_DIRECTIVES, forms_1.FORM_DIRECTIVES],
+            directives: [radio_1.MD_RADIO_DIRECTIVES, common_1.FORM_DIRECTIVES],
             template: "\n  <md-radio-group [(ngModel)]=\"modelValue\" (change)=\"lastEvent = $event\">\n    <md-radio-button *ngFor=\"let option of options\" [value]=\"option.value\">\n      {{option.label}}\n    </md-radio-button>\n  </md-radio-group>\n  "
         }), 
         __metadata('design:paramtypes', [])

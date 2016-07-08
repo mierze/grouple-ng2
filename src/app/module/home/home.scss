@@ -1,37 +1,41 @@
 @import '../../../theme/index';
 .home {
     padding: $gap;
-}
-figure {
-    width          : $all;
-    display        : flex;
-    align-items    : center;
-    justify-content: center;
-    margin         : 0;
-}
-.logo {
-    max-width: $all;
-}
-.row {
-    margin : 0;
-    padding: $ton $gap-dynamic;
-}
-.col {
-    position: relative;
-    float   : left;
-    margin  : 0 auto;
-    padding : 0;
-    width   : $third;
-}
-a {
-    background-color: $secondary;
-    color           : $light;
-    margin          : $space;
-    padding-top     : $gap;
-    text-align      : center;
-    width           : $all;
-}
-md-icon {
-    margin : 0 auto;
-    display: block;
+    figure {
+        width          : $all;
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        margin         : 0;
+    }
+    .logo {
+        max-width: $all;
+    }
+    .row {
+        margin : 0;
+        padding: $ton $gap-dynamic;
+    }
+    .col {
+        position: relative;
+        float   : left;
+        margin  : 0 auto;
+        padding : 0;
+        width   : $third;
+    }
+    a {
+        background-color: $secondary;
+        color           : $light;
+        margin          : $space;
+        padding-top     : $gap;
+        text-align      : center;
+        width           : $all;
+    }
+    li a {
+        margin : $gap;
+        padding: 0;
+    }
+    md-icon {
+        margin : 0 auto;
+        display: block;
+    }
 }

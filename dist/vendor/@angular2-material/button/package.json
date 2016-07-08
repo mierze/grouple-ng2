@@ -1,54 +1,13 @@
 {
-  "_args": [
-    [
-      "@angular2-material/button@^2.0.0-alpha.6",
-      "/Users/brett/Documents/Workspaces/grouple-workspace/grouple-fire"
-    ]
-  ],
-  "_from": "@angular2-material/button@>=2.0.0-alpha.6 <3.0.0",
-  "_id": "@angular2-material/button@2.0.0-alpha.6",
-  "_inCache": true,
-  "_installable": true,
-  "_location": "/@angular2-material/button",
-  "_nodeVersion": "4.1.2",
-  "_npmOperationalInternal": {
-    "host": "packages-16-east.internal.npmjs.com",
-    "tmp": "tmp/button-2.0.0-alpha.6.tgz_1467300927810_0.9443565418478101"
-  },
-  "_npmUser": {
-    "email": "angular-core+npm@google.com",
-    "name": "angular2-material"
-  },
-  "_npmVersion": "3.8.7",
-  "_phantomChildren": {},
-  "_requested": {
-    "name": "@angular2-material/button",
-    "raw": "@angular2-material/button@^2.0.0-alpha.6",
-    "rawSpec": "^2.0.0-alpha.6",
-    "scope": "@angular2-material",
-    "spec": ">=2.0.0-alpha.6 <3.0.0",
-    "type": "range"
-  },
-  "_requiredBy": [
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/@angular2-material/button/-/button-2.0.0-alpha.6.tgz",
-  "_shasum": "33972d048b3d83de0777924e778d914aee143e65",
-  "_shrinkwrap": null,
-  "_spec": "@angular2-material/button@^2.0.0-alpha.6",
-  "_where": "/Users/brett/Documents/Workspaces/grouple-workspace/grouple-fire",
-  "bugs": {
-    "url": "https://github.com/angular/material2/issues"
-  },
-  "dependencies": {},
+  "name": "@angular2-material/button",
+  "version": "2.0.0-alpha.5-3",
   "description": "Angular 2 Material button",
-  "devDependencies": {},
-  "directories": {},
-  "dist": {
-    "shasum": "33972d048b3d83de0777924e778d914aee143e65",
-    "tarball": "https://registry.npmjs.org/@angular2-material/button/-/button-2.0.0-alpha.6.tgz"
+  "main": "./button.js",
+  "typings": "./button.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/material2.git"
   },
-  "homepage": "https://github.com/angular/material2#readme",
   "keywords": [
     "angular",
     "material",
@@ -59,24 +18,37 @@
     "linkbutton"
   ],
   "license": "MIT",
-  "main": "./button.js",
+  "bugs": {
+    "url": "https://github.com/angular/material2/issues"
+  },
+  "homepage": "https://github.com/angular/material2#readme",
+  "peerDependencies": {
+    "@angular2-material/core": "2.0.0-alpha.5-3"
+  },
+  "_id": "@angular2-material/button@2.0.0-alpha.5-3",
+  "scripts": {},
+  "_shasum": "a5ae8117c98c0fb0ab7603b3a84075b6b7a4e0ca",
+  "_from": "@angular2-material/button@2.0.0-alpha.5-3",
+  "_resolved": "https://registry.npmjs.org/@angular2-material/button/-/button-2.0.0-alpha.5-3.tgz",
+  "_npmVersion": "3.8.7",
+  "_nodeVersion": "4.1.2",
+  "_npmUser": {
+    "name": "angular2-material",
+    "email": "angular-core+npm@google.com"
+  },
+  "dist": {
+    "shasum": "a5ae8117c98c0fb0ab7603b3a84075b6b7a4e0ca",
+    "tarball": "https://registry.npmjs.org/@angular2-material/button/-/button-2.0.0-alpha.5-3.tgz"
+  },
   "maintainers": [
     {
-      "email": "angular-core+npm@google.com",
-      "name": "angular2-material"
+      "name": "angular2-material",
+      "email": "angular-core+npm@google.com"
     }
   ],
-  "name": "@angular2-material/button",
-  "optionalDependencies": {},
-  "peerDependencies": {
-    "@angular2-material/core": "2.0.0-alpha.6"
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/button-2.0.0-alpha.5-3.tgz_1467296821713_0.5296763963997364"
   },
-  "readme": "ERROR: No README data found!",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/angular/material2.git"
-  },
-  "scripts": {},
-  "typings": "./button.d.ts",
-  "version": "2.0.0-alpha.6"
+  "directories": {}
 }

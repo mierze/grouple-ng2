@@ -1,54 +1,13 @@
 {
-  "_args": [
-    [
-      "@angular2-material/icon@^2.0.0-alpha.6",
-      "/Users/brett/Documents/Workspaces/grouple-workspace/grouple-fire"
-    ]
-  ],
-  "_from": "@angular2-material/icon@>=2.0.0-alpha.6 <3.0.0",
-  "_id": "@angular2-material/icon@2.0.0-alpha.6",
-  "_inCache": true,
-  "_installable": true,
-  "_location": "/@angular2-material/icon",
-  "_nodeVersion": "4.1.2",
-  "_npmOperationalInternal": {
-    "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/icon-2.0.0-alpha.6.tgz_1467300945502_0.9658295388799161"
-  },
-  "_npmUser": {
-    "email": "angular-core+npm@google.com",
-    "name": "angular2-material"
-  },
-  "_npmVersion": "3.8.7",
-  "_phantomChildren": {},
-  "_requested": {
-    "name": "@angular2-material/icon",
-    "raw": "@angular2-material/icon@^2.0.0-alpha.6",
-    "rawSpec": "^2.0.0-alpha.6",
-    "scope": "@angular2-material",
-    "spec": ">=2.0.0-alpha.6 <3.0.0",
-    "type": "range"
-  },
-  "_requiredBy": [
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/@angular2-material/icon/-/icon-2.0.0-alpha.6.tgz",
-  "_shasum": "871b7e396a3c81488ed3f60a9c8a69f435142546",
-  "_shrinkwrap": null,
-  "_spec": "@angular2-material/icon@^2.0.0-alpha.6",
-  "_where": "/Users/brett/Documents/Workspaces/grouple-workspace/grouple-fire",
-  "bugs": {
-    "url": "https://github.com/angular/material2/issues"
-  },
-  "dependencies": {},
+  "name": "@angular2-material/icon",
+  "version": "2.0.0-alpha.5-3",
   "description": "Angular 2 Material icon",
-  "devDependencies": {},
-  "directories": {},
-  "dist": {
-    "shasum": "871b7e396a3c81488ed3f60a9c8a69f435142546",
-    "tarball": "https://registry.npmjs.org/@angular2-material/icon/-/icon-2.0.0-alpha.6.tgz"
+  "main": "./icon.js",
+  "typings": "./icon.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/material2.git"
   },
-  "homepage": "https://github.com/angular/material2#readme",
   "keywords": [
     "angular",
     "material",
@@ -57,25 +16,38 @@
     "icon"
   ],
   "license": "MIT",
-  "main": "./icon.js",
-  "maintainers": [
-    {
-      "email": "angular-core+npm@google.com",
-      "name": "angular2-material"
-    }
-  ],
-  "name": "@angular2-material/icon",
-  "optionalDependencies": {},
+  "bugs": {
+    "url": "https://github.com/angular/material2/issues"
+  },
+  "homepage": "https://github.com/angular/material2#readme",
   "peerDependencies": {
     "@angular/http": "2.0.0-rc.3",
-    "@angular2-material/core": "2.0.0-alpha.6"
+    "@angular2-material/core": "2.0.0-alpha.5-3"
   },
-  "readme": "ERROR: No README data found!",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/angular/material2.git"
-  },
+  "_id": "@angular2-material/icon@2.0.0-alpha.5-3",
   "scripts": {},
-  "typings": "./icon.d.ts",
-  "version": "2.0.0-alpha.6"
+  "_shasum": "319d56d8eb88af5d4b0bb862fc06c0043201f02d",
+  "_from": "@angular2-material/icon@2.0.0-alpha.5-3",
+  "_resolved": "https://registry.npmjs.org/@angular2-material/icon/-/icon-2.0.0-alpha.5-3.tgz",
+  "_npmVersion": "3.8.7",
+  "_nodeVersion": "4.1.2",
+  "_npmUser": {
+    "name": "angular2-material",
+    "email": "angular-core+npm@google.com"
+  },
+  "dist": {
+    "shasum": "319d56d8eb88af5d4b0bb862fc06c0043201f02d",
+    "tarball": "https://registry.npmjs.org/@angular2-material/icon/-/icon-2.0.0-alpha.5-3.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "angular2-material",
+      "email": "angular-core+npm@google.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/icon-2.0.0-alpha.5-3.tgz_1467296845605_0.5539327024016529"
+  },
+  "directories": {}
 }

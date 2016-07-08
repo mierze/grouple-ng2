@@ -19,6 +19,7 @@ var GroupList = (function () {
         core_1.Component({
             moduleId: module.id,
             templateUrl: 'group-list.html',
+            styleUrls: ['group-list.css'],
             directives: [router_1.ROUTER_DIRECTIVES]
         }), 
         __metadata('design:paramtypes', [angularfire2_1.AngularFire])

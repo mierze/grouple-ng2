@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: 'app/module/group/profile/profile.html'
+    moduleId: module.id,
+    templateUrl: 'profile.html',
+    styleUrls: ['profile.css', '../../shared/styles/buttons.css']
 })
 export class GroupProfile {
     constructor() { }

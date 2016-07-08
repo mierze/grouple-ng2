@@ -5,6 +5,7 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
 @Component({
     moduleId: module.id,
     templateUrl: 'group-list.html',
+    styleUrls: ['group-list.css'],
     directives: [ROUTER_DIRECTIVES]
 })
 export class GroupList {

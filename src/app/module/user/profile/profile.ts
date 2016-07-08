@@ -1,17 +1,24 @@
 import { Component } from '@angular/core';
 import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
-
+import { Router, ActivatedRoute } from '@angular/router';
 @Component({
     moduleId: module.id,
     templateUrl: 'profile.html',
     styleUrls: ['profile.css', '../../shared/styles/buttons.css']
 })
 export class UserProfile {
-  user: FirebaseObjectObservable<any>;
+    user: FirebaseObjectObservable<any>;
+    sub: any;
+    constructor(private route: ActivatedRoute, private router: Router, af: AngularFire) {
 
-    constructor(af: AngularFire) {
-      this.user = af.database.object('users/1');
-      // alert(JSON.stringify(this.user));
+
+        this.sub = this.route.params.subscribe(params => {
+            let id = +params['id']; // (+) converts string 'id' to a number
+            this.user = af.database.object('users/' + id);
+
+        });
+
+        // alert(JSON.stringify(this.user));
     }
     // $rootScope, $stateParams, UserProfileGetter, UserImageGettercontroller.ts
     // let storage = window.localStorage;

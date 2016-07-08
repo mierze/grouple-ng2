@@ -17,10 +17,12 @@ export class Home {
     //SessionChecker.check(1);
 
     items: FirebaseListObservable<any[]>;
+    users: FirebaseListObservable<any[]>;
     msg: string;
     title: string = 'Grouple';
     constructor(af: AngularFire) {
         this.items = af.database.list('messages');
+        this.users = af.database.list('users');
     }
 
     addItem() {

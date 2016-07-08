@@ -27,7 +27,7 @@ A demo of the checkbox can be found at https://plnkr.co/edit/P7qce8lN9n2flS6kBhD
 ### Usage within Forms
 
 In addition to supporting native checkbox functionality, `md-checkbox` also supports `[(ngModel)]`
-for use within forms.
+and `ngControl` for use within forms.
 
 ```html
 <form (submit)="saveUser()">
