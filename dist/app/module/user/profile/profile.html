@@ -4,12 +4,14 @@
      <!-- <img class="profile-img" alt="Profile Image" />      -->
    </figure>
     <article>
-        <em>24 yrs young</em>
-        <strong>hello dear</strong>
-        <p>i'm a user and i'm okay</p>
+      <h2>
+        {{(user | async)?.name}}
+      </h2>
+        <em>Born: {{(user | async)?.dob}}</em>
+        <strong>{{(user | async)?.sex}}</strong>
+        <p>{{(user | async)?.about}}</p>
     </article>
     <button md-button>Badges</button>
-    <button md-button>Friends</button>
     <button md-button>Groups</button>
     <button md-button>Upcoming Events</button>
     <button md-button>Edit Profile</button>

@@ -9,16 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var angularfire2_1 = require('angularfire2');
 var UserProfile = (function () {
-    function UserProfile() {
+    function UserProfile(af) {
+        this.user = af.database.object('users/1');
+        // alert(JSON.stringify(this.user));
     }
     UserProfile = __decorate([
         core_1.Component({
             moduleId: module.id,
             templateUrl: 'profile.html',
-            styleUrls: ['profile.css']
+            styleUrls: ['profile.css', '../../shared/styles/buttons.css']
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [angularfire2_1.AngularFire])
     ], UserProfile);
     return UserProfile;
 }());

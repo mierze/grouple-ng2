@@ -11,10 +11,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var testing_1 = require('@angular/core/testing');
 var testing_2 = require('@angular/compiler/testing');
 var core_1 = require('@angular/core');
+var forms_1 = require('@angular/forms');
 var platform_browser_1 = require('@angular/platform-browser');
 var input_1 = require('./input');
 testing_1.describe('MdInput', function () {
     var builder;
+    testing_1.beforeEachProviders(function () { return [
+        forms_1.disableDeprecatedForms(),
+        forms_1.provideForms(),
+    ]; });
     testing_1.beforeEach(testing_1.inject([testing_2.TestComponentBuilder], function (tcb) {
         builder = tcb;
     }));

@@ -1,11 +1,18 @@
 import { Component } from '@angular/core';
+import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
+
 @Component({
     moduleId: module.id,
     templateUrl: 'profile.html',
-    styleUrls: ['profile.css']
+    styleUrls: ['profile.css', '../../shared/styles/buttons.css']
 })
 export class UserProfile {
-    constructor() { }
+  user: FirebaseObjectObservable<any>;
+
+    constructor(af: AngularFire) {
+      this.user = af.database.object('users/1');
+      // alert(JSON.stringify(this.user));
+    }
     // $rootScope, $stateParams, UserProfileGetter, UserImageGettercontroller.ts
     // let storage = window.localStorage;
     // private info: any = {};

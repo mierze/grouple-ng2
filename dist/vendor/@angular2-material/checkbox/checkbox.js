@@ -9,16 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var common_1 = require('@angular/common');
+var forms_1 = require('@angular/forms');
 /**
  * Monotonically increasing integer used to auto-generate unique ids for checkbox components.
  */
 var nextId = 0;
 /**
  * Provider Expression that allows md-checkbox to register as a ControlValueAccessor. This allows it
- * to support [(ngModel)] and ngControl.
+ * to support [(ngModel)].
  */
-exports.MD_CHECKBOX_CONTROL_VALUE_ACCESSOR = new core_1.Provider(common_1.NG_VALUE_ACCESSOR, {
+exports.MD_CHECKBOX_CONTROL_VALUE_ACCESSOR = new core_1.Provider(forms_1.NG_VALUE_ACCESSOR, {
     useExisting: core_1.forwardRef(function () { return MdCheckbox; }),
     multi: true
 });

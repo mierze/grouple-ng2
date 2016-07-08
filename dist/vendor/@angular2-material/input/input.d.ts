@@ -1,5 +1,5 @@
 import { Provider, AfterContentInit, SimpleChange, OnChanges } from '@angular/core';
-import { ControlValueAccessor } from '@angular/common';
+import { ControlValueAccessor } from '@angular/forms';
 import { MdError } from '@angular2-material/core/errors/error';
 import { Observable } from 'rxjs/Observable';
 export declare const MD_INPUT_CONTROL_VALUE_ACCESSOR: Provider;

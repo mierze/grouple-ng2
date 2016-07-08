@@ -15,6 +15,7 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 })
 export class Home {
     //SessionChecker.check(1);
+
     items: FirebaseListObservable<any[]>;
     msg: string;
     title: string = 'Grouple';
