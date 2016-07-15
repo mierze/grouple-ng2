@@ -4,7 +4,7 @@
     <!-- <sad-guy ng-show='vm.sadGuy'></sad-guy> -->
     <ul>
         <li *ngFor="let event of events | async">
-            {{event.name}}
+            <a md-button [routerLink]="['/event-profile', event.$key]">{{event.name}}</a>
         </li>
     </ul>
 </div>

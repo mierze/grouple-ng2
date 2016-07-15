@@ -1,0 +1,14 @@
+@import '../../../../theme/colors';
+p {
+  margin: 5px 0;
+}
+md-card-title {
+  margin: 0;
+}
+a[md-button], button[md-button] {
+  background-color: $purple;
+  color: $light;
+}
+article {
+
+}

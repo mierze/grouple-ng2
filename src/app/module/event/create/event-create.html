@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<h1>Event Create</h1>
+
+<form (ngSubmit)="create()" #eventForm="ngForm">
+  <label for="name">
+    Name
+  </label>
+  <input name="name" type="text" [(ngModel)]="event.name" required/>
+  <label for="about">
+    About
+  </label>
+  <input name="about" type="text" [(ngModel)]="event.about"/>
+  <label for="location">
+    Location
+  </label>
+  <input name="location" type="text" [(ngModel)]="event.location"/>
+  <label for="start-date">
+    Start Date
+  </label>
+  <input name="start-date" type="text" [(ngModel)]="event.startDate"/>
+  <label for="end-date">
+    End Date
+  </label>
+  <input name="end-date" type="text" [(ngModel)]="event.endDate"/>
+  <label for="recurring">
+    Recurring
+  </label>
+  <input name="recurring" type="text" [(ngModel)]="event.recurring"/>
+  <label for="mininimum">
+    Minimum Participants
+  </label>
+  <input name="minimum" type="text" [(ngModel)]="event.minimum"/>
+  <label for="maximum">
+    Maximum Participants
+  </label>
+  <input name="maximum" type="text" [(ngModel)]="event.maximum"/>
+  <label for="public">
+    Public
+  </label>
+  <input type="text" name="public" [(ngModel)]="event.public"/>
+
+  <button md-button type="submit">Create Event</button>
+</form>
+<div>
+  {{key}}
+  <a md-button [routerLink]="['event-profile', key]">Launch Profile</a>
+</div>

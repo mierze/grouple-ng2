@@ -8,10 +8,6 @@ md-toolbar {
     flex: 1 1 auto;
 }
 nav {
-    margin-left     : -500px;
-    width           : 280px;
-    position        : fixed;
-    top             : 65px;
     left            : 0;
     background-color: $light;
     z-index         : $above;
@@ -22,6 +18,33 @@ nav a {
     width     : $all;
     z-index   : $clouds !important;
 }
-nav.open {
-    margin-left: 0;
+
+.slide-menu-left,
+.slide-menu-right {
+    position          : fixed;
+    top               : 64px;
+    z-index           : 9999;
+    width             : 270px;
+    //animation duration
+    -webkit-transition: margin 0.5s ease;
+    -moz-transition   : margin 0.5s ease;
+    -o-transition     : margin 0.5s ease;
+    -ms-transition    : margin 0.5s ease;
+    transition        : margin 0.5s ease;
+    box-shadow: 1px 1px 2px $dark;
+    overflow-y        : scroll !important;
+}
+.slide-menu-left {
+    left  : 0;
+    margin: 0 0 0 -400px;
+}
+.slide-menu-left.open {
+    margin-left: 15px;
+}
+.slide-menu-right {
+    right : 0;
+    margin: 0 -400px 0 0;
+}
+.slide-menu-right.open {
+    margin-right: 15px;
 }

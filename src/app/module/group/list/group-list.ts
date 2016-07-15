@@ -1,30 +1,31 @@
 import { Component } from '@angular/core';
-import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { AngularFire, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2';
 import { ROUTER_DIRECTIVES } from '@angular/router';
-
+import { UserService } from '../../../shared';
 @Component({
     moduleId: module.id,
     templateUrl: 'group-list.html',
-    styleUrls: ['group-list.css'],
-    directives: [ROUTER_DIRECTIVES]
+    styleUrls: ['group-list.css', '../../shared/styles/buttons.css'],
+    directives: [ROUTER_DIRECTIVES],
+    providers: [UserService]
 })
 export class GroupList {
     groups: FirebaseListObservable<any[]>;
+    gs: FirebaseObjectObservable<any>;
+    af:AngularFire;
+    constructor(af: AngularFire, us: UserService) {
+      this.af = af;
+        this.groups = af.database.list('users/1/groups');
+        this.gs = this.af.database.object('groups/1');
 
-    constructor(af: AngularFire) {
-        this.groups = af.database.list('groups');
     }
 
 
-
-
-
-
-
-
-
-
-
+    getName(id: string): FirebaseObjectObservable<any> {
+      let gd:FirebaseObjectObservable<any>;
+      gd = this.af.database.object('groups/' +id);
+      return gd;
+    }
 
     // $rootScope, $stateParams, GroupListGetter
 

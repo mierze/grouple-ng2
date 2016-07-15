@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <div class="event-profile">
-    <!-- <img ng-src="{{vm.image}}" alt="Profile Image" ng-cloak/> -->
-    <section>
-        <em>start date</em>
-        <strong>location</strong>
-        <p>about</p>
-    </section>
-    <a md-button>Participants</a>
-    <a md-button>Messages</a>
-    <button md-button>Edit Event</button>
-    <a md-button>Invite Groups</a>
-    <!-- <event-edit></event-edit> -->
+  <article>
+    <h2>
+      {{(event | async)?.name}}
+    </h2>
+    <em>Location:
+      {{(event | async)?.location}}</em>
+    <strong>{{(event | async)?.startDate}}</strong>
+    <strong>{{(event | async)?.endDate}}</strong>
+    <p>{{(event | async)?.about}}</p>
+    <p>Maximum Participants {{(event | async)?.minimum}}</p>
+    <p>Minimum Participants{{(event | async)?.maximum}}</p>
+  </article>
+
+  <a md-button>Participants</a>
+  <a md-button>Messages</a>
+  <button md-button>Edit Event</button>
+  <a md-button>Invite Groups</a>
+  <!-- <event-edit></event-edit> -->
 </div>

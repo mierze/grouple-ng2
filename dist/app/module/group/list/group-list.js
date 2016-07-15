@@ -11,18 +11,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var angularfire2_1 = require('angularfire2');
 var router_1 = require('@angular/router');
+var shared_1 = require('../../../shared');
 var GroupList = (function () {
-    function GroupList(af) {
-        this.groups = af.database.list('groups');
+    function GroupList(af, us) {
+        this.af = af;
+        this.groups = af.database.list('users/1/groups');
+        this.gs = this.af.database.object('groups/1');
     }
+    GroupList.prototype.getName = function (id) {
+        var gd;
+        gd = this.af.database.object('groups/' + id);
+        return gd;
+    };
     GroupList = __decorate([
         core_1.Component({
             moduleId: module.id,
             templateUrl: 'group-list.html',
-            styleUrls: ['group-list.css'],
-            directives: [router_1.ROUTER_DIRECTIVES]
+            styleUrls: ['group-list.css', '../../shared/styles/buttons.css'],
+            directives: [router_1.ROUTER_DIRECTIVES],
+            providers: [shared_1.UserService]
         }), 
-        __metadata('design:paramtypes', [angularfire2_1.AngularFire])
+        __metadata('design:paramtypes', [angularfire2_1.AngularFire, shared_1.UserService])
     ], GroupList);
     return GroupList;
 }());

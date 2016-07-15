@@ -1,8 +1,8 @@
 import { ElementRef, EventEmitter, Provider, Renderer, AfterContentInit } from '@angular/core';
-import { ControlValueAccessor } from '@angular/common';
+import { ControlValueAccessor } from '@angular/forms';
 /**
  * Provider Expression that allows md-checkbox to register as a ControlValueAccessor. This allows it
- * to support [(ngModel)] and ngControl.
+ * to support [(ngModel)].
  */
 export declare const MD_CHECKBOX_CONTROL_VALUE_ACCESSOR: Provider;
 export declare class MdCheckboxChange {

@@ -1,0 +1,24 @@
+<section class="user-profile">
+  <md-card>
+    <img md-card-image [src]="profileImg" class="profile-img" alt="Profile Image"/>
+    <md-card-title>
+      {{(user | async)?.name}}
+    </md-card-title>
+    <md-card-content class="secondary">
+      <p>24 years young</p>
+      <!-- Born: {{(user | async)?.dob}} -->
+      <!-- <strong>{{(user | async)?.sex}}</strong> -->
+      <p>{{(user | async)?.about}}</p>
+    </md-card-content>
+    <md-card-actions>
+      <button md-button color="primary">Badges</button>
+      <button md-button color="primary">Groups</button>
+      <button md-button color="primary">Upcoming Events</button>
+      <button md-button color="primary">Edit Profile</button>
+    </md-card-actions>
+  </md-card>
+
+  <article></article>
+
+  <!-- <user-edit ng-show="vm.showEdit"></user-edit> -->
+</section>

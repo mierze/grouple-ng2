@@ -1,5 +1,5 @@
 import { AfterContentInit, EventEmitter, OnInit, Provider } from '@angular/core';
-import { ControlValueAccessor } from '@angular/common';
+import { ControlValueAccessor } from '@angular/forms';
 import { MdUniqueSelectionDispatcher } from '@angular2-material/core/coordination/unique-selection-dispatcher';
 export { MdUniqueSelectionDispatcher } from '@angular2-material/core/coordination/unique-selection-dispatcher';
 /**

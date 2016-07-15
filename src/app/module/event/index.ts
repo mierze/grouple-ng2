@@ -1,3 +1,4 @@
 export * from './list/index';
 export * from './profile/index';
-export { EventsLanding } from './landing';
+export * from './create/index';
+export { EventLanding } from './event-landing';

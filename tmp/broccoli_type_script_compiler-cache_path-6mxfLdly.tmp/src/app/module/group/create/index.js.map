@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../../Users/brett/Documents/Workspaces/grouple-workspace/grouple-fire/tmp/broccoli_type_script_compiler-input_base_path-G72wLGhC.tmp/0/src/app/module/group/create/index.ts"],"names":[],"mappings":";AAAA,6BAA4B,gBAAgB,CAAC;AAApC,iDAAoC","sourcesContent":["export { GroupCreate } from './group-create';\n"]}

@@ -9,16 +9,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
+var angularfire2_1 = require('angularfire2');
+var router_2 = require('@angular/router');
 var GroupProfile = (function () {
-    function GroupProfile() {
+    function GroupProfile(route, router, af) {
+        var _this = this;
+        this.route = route;
+        this.router = router;
+        this.sub = this.route.params.subscribe(function (params) {
+            _this.id = params['id']; // (+) converts string 'id' to a number
+            _this.group = af.database.object('groups/' + _this.id);
+        });
     }
     GroupProfile = __decorate([
         core_1.Component({
             moduleId: module.id,
             templateUrl: 'profile.html',
-            styleUrls: ['profile.css', '../../shared/styles/buttons.css']
+            styleUrls: ['profile.css', '../../shared/styles/buttons.css'],
+            directives: [router_1.ROUTER_DIRECTIVES]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_2.ActivatedRoute, router_2.Router, angularfire2_1.AngularFire])
     ], GroupProfile);
     return GroupProfile;
 }());

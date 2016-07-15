@@ -1,9 +1,10 @@
 <div>
-    <!-- <group-row ng-repeat="item in vm.items"></group-row> -->
     <!-- <sad-guy ng-show='vm.sadGuy'></sad-guy> -->
+
     <ul>
         <li *ngFor="let group of groups | async">
-        <a [routerLink]="['/user-profile', '1']">{{group.name}}</a>
+          {{group.$value}} {{(getName(group.$value) | async)?.name}}
+        <!-- <a md-button [routerLink]="['/group-profile', group.$key]">{{group.name}}</a> -->
         </li>
     </ul>
 </div>

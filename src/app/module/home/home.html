@@ -2,6 +2,10 @@
   <figure>
     <img class="logo" src="app/asset/image/grouple-logo.png" alt="Grouple Logo"/>
   </figure>
+
+  <button md-button (click)="login()">Login</button>
+  <button md-button (click)="logout()">Logout</button>
+
   <div class="row">
     <div class="col">
       <a md-button [routerLink]="['/groups']">
@@ -16,7 +20,7 @@
     </a>
     </div>
     <div class="col">
-      <a md-button [routerLink]="['/user-profile']">
+      <a md-button [routerLink]="['/user-profile', 1]">
         <md-icon>person</md-icon>
         Profile
     </a>
@@ -36,7 +40,20 @@
         <li *ngFor="let item of items | async">
             {{item.data}} <button (click)="removeItem(item.$key)">x</button>
         </li>
+        <li>
+        here:
+      </li>
+
     </ul>
+
+            <div *ngIf="auth | async">You are logged in
+
+
+            </div>
+            <div *ngIf="!(auth | async)">Please log in
+
+
+            </div>
     <input type="text" [(ngModel)]="msg" />
     <button (click)="addItem(msg)">Send</button>
   </div>

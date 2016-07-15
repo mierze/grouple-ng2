@@ -1,16 +1,19 @@
 
 <div class="group-profile">
     <!-- <img class="profile-img" ng-src="{{vm.image}}" alt="Profile Image" ng-cloak/> -->
-    <section>
-        <p>This is about a group</p>
-    </section>
-    <a md-button>Members</a>
-    <a md-button>Messages</a>
-       <!-- GROUP EVENTS HERE
-       <a class="btn" ui-sref="group-upcoming-events">Upcoming Group Events</a>
+    <article>
+        <h2>
+          {{(group | async)?.name}}
+        </h2>
+        <em>Location:
+          {{(group | async)?.location}}</em>
+        <p>{{(group | async)?.about}}</p>
 
-       also need a better name than editable, maybe privs, mod, admin ?-->
+    </article>
+    <a md-button>Members</a>
+    <a md-button [routerLink]="['/group-messages', id]">Messages</a>
+
     <button md-button>Edit Profile</button>
-    <a md-button>Invite Friends</a>
+    <a md-button [routerLink]="['/group-invite']">Invite Friends</a>
     <!-- <group-edit></group-edit> -->
 </div>

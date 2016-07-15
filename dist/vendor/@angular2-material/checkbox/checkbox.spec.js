@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var testing_1 = require('@angular/core/testing');
-var common_1 = require('@angular/common');
+var forms_1 = require('@angular/forms');
 var testing_2 = require('@angular/compiler/testing');
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
@@ -19,6 +19,10 @@ var promise_completer_1 = require('@angular2-material/core/async/promise-complet
 describe('MdCheckbox', function () {
     var builder;
     var fixture;
+    testing_1.beforeEachProviders(function () { return [
+        forms_1.disableDeprecatedForms(),
+        forms_1.provideForms(),
+    ]; });
     testing_1.beforeEach(testing_1.inject([testing_2.TestComponentBuilder], function (tcb) {
         builder = tcb;
     }));
@@ -336,7 +340,7 @@ describe('MdCheckbox', function () {
             expect(firstId).not.toEqual(secondId);
         });
     });
-    describe('with ngModel and ngControl', function () {
+    describe('with ngModel', function () {
         testing_1.beforeEach(testing_1.async(function () {
             builder.createAsync(CheckboxWithFormDirectives).then(function (f) {
                 f.detectChanges();
@@ -346,7 +350,7 @@ describe('MdCheckbox', function () {
         testing_1.it('should be in pristine, untouched, and valid states initially', testing_1.fakeAsync(function () {
             testing_1.flushMicrotasks();
             var checkboxElement = fixture.debugElement.query(platform_browser_1.By.directive(checkbox_1.MdCheckbox));
-            var ngControl = checkboxElement.injector.get(common_1.NgControl);
+            var ngControl = checkboxElement.injector.get(forms_1.NgControl);
             expect(ngControl.valid).toBe(true);
             expect(ngControl.pristine).toBe(true);
             expect(ngControl.touched).toBe(false);
@@ -389,15 +393,15 @@ var SingleCheckbox = (function () {
     ], SingleCheckbox);
     return SingleCheckbox;
 }());
-/** Simple component for testing an MdCheckbox with ngModel and ngControl. */
+/** Simple component for testing an MdCheckbox with ngModel. */
 var CheckboxWithFormDirectives = (function () {
     function CheckboxWithFormDirectives() {
         this.isGood = false;
     }
     CheckboxWithFormDirectives = __decorate([
         core_1.Component({
-            directives: [checkbox_1.MdCheckbox, common_1.FORM_DIRECTIVES, common_1.NgModel],
-            template: "\n    <form>\n      <md-checkbox ngControl=\"cb\" [(ngModel)]=\"isGood\">Be good</md-checkbox>\n    </form>\n  ",
+            directives: [checkbox_1.MdCheckbox, forms_1.FORM_DIRECTIVES, forms_1.NgModel],
+            template: "\n    <form>\n      <md-checkbox name=\"cb\" [(ngModel)]=\"isGood\">Be good</md-checkbox>\n    </form>\n  ",
         }), 
         __metadata('design:paramtypes', [])
     ], CheckboxWithFormDirectives);

@@ -1,13 +1,54 @@
 {
-  "name": "@angular2-material/toolbar",
-  "version": "2.0.0-alpha.5-3",
-  "description": "Angular 2 Material toolbar",
-  "main": "./toolbar.js",
-  "typings": "./toolbar.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/angular/material2.git"
+  "_args": [
+    [
+      "@angular2-material/toolbar@^2.0.0-alpha.6",
+      "/Users/brett/Documents/Workspaces/grouple-workspace/grouple-fire"
+    ]
+  ],
+  "_from": "@angular2-material/toolbar@>=2.0.0-alpha.6 <3.0.0",
+  "_id": "@angular2-material/toolbar@2.0.0-alpha.6",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/@angular2-material/toolbar",
+  "_nodeVersion": "4.1.2",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/toolbar-2.0.0-alpha.6.tgz_1467300971850_0.6646599099040031"
   },
+  "_npmUser": {
+    "email": "angular-core+npm@google.com",
+    "name": "angular2-material"
+  },
+  "_npmVersion": "3.8.7",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "@angular2-material/toolbar",
+    "raw": "@angular2-material/toolbar@^2.0.0-alpha.6",
+    "rawSpec": "^2.0.0-alpha.6",
+    "scope": "@angular2-material",
+    "spec": ">=2.0.0-alpha.6 <3.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@angular2-material/toolbar/-/toolbar-2.0.0-alpha.6.tgz",
+  "_shasum": "8b0305d5fd19f508866d1a83457f2b3bae65633a",
+  "_shrinkwrap": null,
+  "_spec": "@angular2-material/toolbar@^2.0.0-alpha.6",
+  "_where": "/Users/brett/Documents/Workspaces/grouple-workspace/grouple-fire",
+  "bugs": {
+    "url": "https://github.com/angular/material2/issues"
+  },
+  "dependencies": {},
+  "description": "Angular 2 Material toolbar",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "8b0305d5fd19f508866d1a83457f2b3bae65633a",
+    "tarball": "https://registry.npmjs.org/@angular2-material/toolbar/-/toolbar-2.0.0-alpha.6.tgz"
+  },
+  "homepage": "https://github.com/angular/material2#readme",
   "keywords": [
     "angular",
     "material",
@@ -17,37 +58,24 @@
     "header"
   ],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/angular/material2/issues"
-  },
-  "homepage": "https://github.com/angular/material2#readme",
-  "peerDependencies": {
-    "@angular2-material/core": "2.0.0-alpha.5-3"
-  },
-  "_id": "@angular2-material/toolbar@2.0.0-alpha.5-3",
-  "scripts": {},
-  "_shasum": "348acbc353976772733cde7b82b7d3c8cd672efe",
-  "_from": "@angular2-material/toolbar@2.0.0-alpha.5-3",
-  "_resolved": "https://registry.npmjs.org/@angular2-material/toolbar/-/toolbar-2.0.0-alpha.5-3.tgz",
-  "_npmVersion": "3.8.7",
-  "_nodeVersion": "4.1.2",
-  "_npmUser": {
-    "name": "angular2-material",
-    "email": "angular-core+npm@google.com"
-  },
-  "dist": {
-    "shasum": "348acbc353976772733cde7b82b7d3c8cd672efe",
-    "tarball": "https://registry.npmjs.org/@angular2-material/toolbar/-/toolbar-2.0.0-alpha.5-3.tgz"
-  },
+  "main": "./toolbar.js",
   "maintainers": [
     {
-      "name": "angular2-material",
-      "email": "angular-core+npm@google.com"
+      "email": "angular-core+npm@google.com",
+      "name": "angular2-material"
     }
   ],
-  "_npmOperationalInternal": {
-    "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/toolbar-2.0.0-alpha.5-3.tgz_1467296889762_0.9355081848334521"
+  "name": "@angular2-material/toolbar",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "@angular2-material/core": "2.0.0-alpha.6"
   },
-  "directories": {}
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/material2.git"
+  },
+  "scripts": {},
+  "typings": "./toolbar.d.ts",
+  "version": "2.0.0-alpha.6"
 }

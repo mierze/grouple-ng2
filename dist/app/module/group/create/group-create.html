@@ -1,6 +1,26 @@
 <h1>Group Create</h1>
-<input type="text" [(ngModel)]="name" />
-<button (click)="create()">Create Group</button>
+ <form (ngSubmit)="create()" #groupForm="ngForm">
+  <label for="name">
+    Name
+  </label>
+  <input name="name" type="text" [(ngModel)]="group.name" required/>
+  <label for="about">
+    About
+  </label>
+  <input name="about" type="text" [(ngModel)]="group.about"/>
+  <label for="location">
+    Location
+  </label>
+  <input name="location" type="text" [(ngModel)]="group.location"/>
+  <label for="public">
+    Public
+  </label>
+  <input type="text" name="public" [(ngModel)]="group.public" />
+
+
+  <button md-button type="submit">Create Group</button>
+</form>
+
 <!-- <form name="groupCreateForm" novalidate ng-submit="(groupCreateForm.$valid && vm.create()) || vm.showErrors())">
     <input type="text" name="name" id="name" placeholder="Name" required ng-minlength="1" ng-maxlength="40" ng-model="vm.post.name" />
     <input type="file" name="image" id="image" placeholder="Profile Image" ng-model="vm.post.image" />
