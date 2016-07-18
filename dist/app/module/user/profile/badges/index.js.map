@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../../../Users/brett/Documents/Workspaces/grouple-workspace/grouple-fire/tmp/broccoli_type_script_compiler-input_base_path-CCfuUHgJ.tmp/0/src/app/module/user/profile/badges/index.ts"],"names":[],"mappings":";;;;AAAA,iBAAc,oBAAoB,CAAC,EAAA","sourcesContent":["export * from './badges.component';\n"]}

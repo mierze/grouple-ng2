@@ -18,16 +18,20 @@ var card_1 = require('@angular2-material/card');
 var icon_1 = require('@angular2-material/icon');
 var UserProfile = (function () {
     function UserProfile(route, router, af) {
-        var _this = this;
         this.route = route;
         this.router = router;
+        this.af = af;
+        this.uid = '';
         this.profileImg = "https://material.angularjs.org/material2_assets/ngconf/Mal.png";
-        this.sub = this.route.params.subscribe(function (params) {
-            var id = +params['id']; // (+) converts string 'id' to a number
-            _this.user = af.database.object('users/' + id);
-        });
-        // alert(JSON.stringify(this.user));
     }
+    UserProfile.prototype.ngOnInit = function () {
+        var _this = this;
+        this.sub = this.route.params.subscribe(function (params) {
+            var id = params['id']; // (+) converts string 'id' to a number
+            _this.uid = id;
+            _this.user = _this.af.database.object('users/' + id);
+        });
+    };
     UserProfile = __decorate([
         core_1.Component({
             moduleId: module.id,
@@ -40,12 +44,13 @@ var UserProfile = (function () {
                 button_1.MdButton,
                 //  MdInput,
                 //  MdCheckbox,
-                icon_1.MdIcon
-            ], providers: [icon_1.MdIconRegistry]
+                icon_1.MdIcon,
+                router_1.ROUTER_DIRECTIVES
+            ], providers: [icon_1.MdIconRegistry],
         }), 
         __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, angularfire2_1.AngularFire])
     ], UserProfile);
     return UserProfile;
 }());
-exports.UserProfile = UserProfile; //end user profile controller
+exports.UserProfile = UserProfile;
 //# sourceMappingURL=user-profile.js.map

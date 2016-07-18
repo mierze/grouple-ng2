@@ -2,59 +2,24 @@
   <figure>
     <img class="logo" src="app/asset/image/grouple-logo.png" alt="Grouple Logo"/>
   </figure>
-
-  <button md-button (click)="login()">Login</button>
-  <button md-button (click)="logout()">Logout</button>
-
   <div class="row">
     <div class="col">
       <a md-button [routerLink]="['/groups']">
         <md-icon>group</md-icon>
         Groups
-    </a>
+      </a>
     </div>
     <div class="col">
       <a md-button large [routerLink]="['/events']">
         <md-icon>event</md-icon>
         Events
-    </a>
+      </a>
     </div>
     <div class="col">
-      <a md-button [routerLink]="['/user-profile', 1]">
+      <a md-button [routerLink]="['/user-profile', user]">
         <md-icon>person</md-icon>
         Profile
-    </a>
+      </a>
     </div>
-    <ul >
-        <li>
-            sample item
-        </li>
-        <li *ngFor="let user of users | async">
-            <a [routerLink]="['user-profile', user.$key]">{{user.name}}</a>
-        </li>
-    </ul>
-    <ul >
-        <li>
-            sample item
-        </li>
-        <li *ngFor="let item of items | async">
-            {{item.data}} <button (click)="removeItem(item.$key)">x</button>
-        </li>
-        <li>
-        here:
-      </li>
-
-    </ul>
-
-            <div *ngIf="auth | async">You are logged in
-
-
-            </div>
-            <div *ngIf="!(auth | async)">Please log in
-
-
-            </div>
-    <input type="text" [(ngModel)]="msg" />
-    <button (click)="addItem(msg)">Send</button>
   </div>
 </section>

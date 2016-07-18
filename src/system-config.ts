@@ -56,8 +56,8 @@ const barrels: string[] = [
 
     // App specific barrels.
     'app',
-    'app/shared',
     'app/module',
+  'app/module/user/badges',
   /** @cli-barrel */
 ];
 

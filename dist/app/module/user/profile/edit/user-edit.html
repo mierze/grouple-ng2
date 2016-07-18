@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<div class="modal" id="editprofile-modal">
+  <div>
+    <a class="close">X</a>
+    <form name="userEditForm" novalidate>
+      <input type="text" class="name" placeholder="First Name" [(ngModel)]="u.name" *ngIf="u"/>
+      <input type="text" class="name" placeholder="Last Name" [(ngModel)]="u.about" *ngIf="u"/>
+      <!-- <input type="text" placeholder="About You" [(ngModel)]="u?.name"/>
+      <input type="number" placeholder="Year Born" [(ngModel)]="u?.name"/>
+      <input type="number" placeholder="Month Born" [(ngModel)]="u?.name"/>
+      <input type="number" placeholder="Day Born" [(ngModel)]="u?.name"/>
+      <input type="text" placeholder="Location" [(ngModel)]="u?.name"/> -->
+      <select placeholder="Gender" [(ngModel)]="u.sex" *ngIf="u">
+        <option name='m'>Male</option>
+        <option name='f'>Female</option>
+      </select>
+      <button class=""  (click)="save()" type="submit">Save</button>
+    </form>
+</div>

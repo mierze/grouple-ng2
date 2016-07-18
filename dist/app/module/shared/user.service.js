@@ -9,16 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var UserEdit = (function () {
-    function UserEdit() {
+var angularfire2_1 = require('angularfire2');
+var UserService = (function () {
+    function UserService(auth) {
+        var _this = this;
+        this.auth = auth;
+        this.uid = '';
+        auth.subscribe(function (auth) {
+            console.log(auth);
+            if (auth)
+                _this.uid = auth.uid;
+        });
     }
-    UserEdit = __decorate([
-        core_1.Component({
-            templateUrl: 'app/module/profile/user/part/user-edit.html',
-        }), 
-        __metadata('design:paramtypes', [])
-    ], UserEdit);
-    return UserEdit;
+    UserService.prototype.getUID = function () {
+        return this.uid;
+    };
+    UserService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [angularfire2_1.FirebaseAuth])
+    ], UserService);
+    return UserService;
 }());
-exports.UserEdit = UserEdit; //end user edit directive
-//# sourceMappingURL=user-edit.js.map
+exports.UserService = UserService;
+//# sourceMappingURL=user.service.js.map

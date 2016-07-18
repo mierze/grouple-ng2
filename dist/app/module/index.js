@@ -6,5 +6,6 @@ function __export(m) {
 __export(require('./home/index'));
 __export(require('./user/index'));
 __export(require('./group/index'));
+__export(require('./shared/index'));
 __export(require('./event/index'));
 //# sourceMappingURL=index.js.map

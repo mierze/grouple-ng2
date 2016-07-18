@@ -1,0 +1,9 @@
+<md-list>
+  <md-list-item *ngFor="let badge of badges | async">
+    <img md-list-avatar src="app/asset/image/badge/{{badge.$key}}.png" alt="Active" />
+    <h3 md-line> {{(badge.$key)}} </h3>
+    <p md-line>
+      <span>Level: {{badge.level}} </span>
+    </p>
+    </md-list-item>
+</md-list>

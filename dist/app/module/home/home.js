@@ -12,43 +12,15 @@ var core_1 = require('@angular/core');
 var icon_1 = require('@angular2-material/icon');
 var button_1 = require('@angular2-material/button');
 var router_1 = require('@angular/router');
-var angularfire2_1 = require('angularfire2');
+var index_1 = require('../shared/index');
 var Home = (function () {
-    function Home(af, auth) {
-        this.af = af;
-        this.auth = auth;
+    function Home(_userService) {
+        this._userService = _userService;
         this.title = 'Grouple';
-        this.items = af.database.list('messages');
-        this.users = af.database.list('users');
+        this.user = '';
     }
-    Home.prototype.login = function () {
-        //       let provider = new this.af.auth.FacebookAuthProvider();
-        //       this.af.auth().signInWithPopup(provider).then(function(result) {
-        //   // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-        //   var token = result.credential.accessToken;
-        //   // The signed-in user info.
-        //   var user = result.user;
-        //   // ...
-        // }).catch(function(error) {
-        //   // Handle Errors here.
-        //   var errorCode = error.code;
-        //   var errorMessage = error.message;
-        //   // The email of the user's account used.
-        //   var email = error.email;
-        //   // The firebase.auth.AuthCredential type that was used.
-        //   var credential = error.credential;
-        //   // ...
-        // });
-        this.auth.login();
-    };
-    Home.prototype.logout = function () {
-        this.auth.logout();
-    };
-    Home.prototype.addItem = function () {
-        this.items.push({ data: this.msg });
-    };
-    Home.prototype.removeItem = function (key) {
-        this.items.remove(key);
+    Home.prototype.ngOnInit = function () {
+        this.user = this._userService.getUID();
     };
     Home = __decorate([
         core_1.Component({
@@ -59,7 +31,7 @@ var Home = (function () {
             directives: [icon_1.MdIcon, button_1.MD_BUTTON_DIRECTIVES, router_1.ROUTER_DIRECTIVES],
             providers: [icon_1.MdIconRegistry]
         }), 
-        __metadata('design:paramtypes', [angularfire2_1.AngularFire, angularfire2_1.FirebaseAuth])
+        __metadata('design:paramtypes', [index_1.UserService])
     ], Home);
     return Home;
 }());

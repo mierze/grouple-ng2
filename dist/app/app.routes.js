@@ -10,13 +10,15 @@ exports.routes = [
     { path: 'user-profile/:id', component: index_1.UserProfile },
     { path: 'group-profile/:id', component: index_1.GroupProfile },
     { path: 'event-profile/:id', component: index_1.EventProfile },
-    { path: 'group-list', component: index_1.GroupList },
+    { path: 'group-list/:id', component: index_1.GroupList },
     { path: 'event-list', component: index_1.EventList },
     { path: 'group-create', component: index_1.GroupCreate },
     { path: 'event-create', component: index_1.EventCreate },
     { path: 'group-invite', component: index_1.GroupInvite },
     { path: 'group-invites/:id', component: index_1.GroupInvites },
-    { path: 'group-messages/:id', component: index_1.GroupMessages }
+    { path: 'group-messages/:id', component: index_1.GroupMessages },
+    { path: 'user-edit/:id', component: index_1.UserEdit },
+    { path: 'badges', component: index_1.BadgesComponent }
 ];
 exports.APP_ROUTER_PROVIDERS = [
     router_1.provideRouter(exports.routes)

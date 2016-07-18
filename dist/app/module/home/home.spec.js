@@ -6,7 +6,7 @@ var home_1 = require('./home');
 testing_1.describe('Component: Home', function () {
     testing_1.it('should create an instance', function () {
         // let component = new Home(public af: AngularFire, public auth: FirebaseAuth);
-        var component = new home_1.Home(null, null);
+        var component = new home_1.Home(null);
         testing_1.expect(true).toBeTruthy();
     });
 });

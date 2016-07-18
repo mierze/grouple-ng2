@@ -11,16 +11,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var angularfire2_1 = require('angularfire2');
 var router_1 = require('@angular/router');
-var shared_1 = require('../../../shared');
 var GroupList = (function () {
-    function GroupList(af, us) {
+    function GroupList(route, af) {
+        var _this = this;
+        this.route = route;
         this.af = af;
-        this.groups = af.database.list('users/1/groups');
         this.gs = this.af.database.object('groups/1');
+        this.sub = this.route.params.subscribe(function (params) {
+            var id = params['id']; // (+) converts string 'id' to a number
+            console.log(id);
+            _this.groups = af.database.list('users/' + id + '/groups');
+        });
     }
     GroupList.prototype.getName = function (id) {
         var gd;
-        gd = this.af.database.object('groups/' + id);
+        // gd = this.af.database.object('groups/' +id);
         return gd;
     };
     GroupList = __decorate([
@@ -28,10 +33,9 @@ var GroupList = (function () {
             moduleId: module.id,
             templateUrl: 'group-list.html',
             styleUrls: ['group-list.css', '../../shared/styles/buttons.css'],
-            directives: [router_1.ROUTER_DIRECTIVES],
-            providers: [shared_1.UserService]
+            directives: [router_1.ROUTER_DIRECTIVES]
         }), 
-        __metadata('design:paramtypes', [angularfire2_1.AngularFire, shared_1.UserService])
+        __metadata('design:paramtypes', [router_1.ActivatedRoute, angularfire2_1.AngularFire])
     ], GroupList);
     return GroupList;
 }());

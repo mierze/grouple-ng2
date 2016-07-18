@@ -15,7 +15,7 @@ import { Home } from './home';
 describe('Component: Home', () => {
   it('should create an instance', () => {
     // let component = new Home(public af: AngularFire, public auth: FirebaseAuth);
-    let component = new Home(null, null);
+    let component = new Home(null);
     expect(true).toBeTruthy();
   });
 });

@@ -16,13 +16,26 @@ var toolbar_1 = require('@angular2-material/toolbar');
 var card_1 = require('@angular2-material/card');
 // import {MdInput} from '@angular2-material/input';
 // import {MdCheckbox} from '@angular2-material/checkbox';
+var angularfire2_1 = require('angularfire2');
 var router_1 = require('@angular/router');
+var index_1 = require('./module/index');
 var App = (function () {
-    function App() {
+    function App(auth) {
+        var _this = this;
+        this.auth = auth;
         this.title = 'Grouple';
-        // alert(relative.thing);
-        // this.items = af.database.grouple-e1e21.list();
+        this.uid = '';
+        auth.subscribe(function (auth) {
+            if (auth)
+                _this.uid = auth.uid;
+        });
     }
+    App.prototype.login = function () {
+        this.auth.login();
+    };
+    App.prototype.logout = function () {
+        this.auth.logout();
+    };
     App = __decorate([
         core_1.Component({
             moduleId: module.id,
@@ -31,9 +44,9 @@ var App = (function () {
             styleUrls: ['app.css'],
             directives: [button_1.MD_BUTTON_DIRECTIVES, card_1.MD_CARD_DIRECTIVES,
                 icon_1.MdIcon, toolbar_1.MdToolbar, router_1.ROUTER_DIRECTIVES],
-            providers: [icon_1.MdIconRegistry]
+            providers: [icon_1.MdIconRegistry, index_1.UserService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [angularfire2_1.FirebaseAuth])
     ], App);
     return App;
 }());

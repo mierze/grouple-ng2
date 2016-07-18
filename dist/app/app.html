@@ -16,10 +16,12 @@
     <md-icon>group</md-icon>Groups</a>
   <a md-button (click)="showMenu = showMenu? false: true" [routerLink]="['/events']">
     <md-icon>event</md-icon>Events</a>
-  <a md-button (click)="showMenu = showMenu? false: true" [routerLink]="['/user-profile', '1']">
+  <a md-button (click)="showMenu = showMenu? false: true" [routerLink]="['/user-profile', uid]">
     <md-icon>person</md-icon>Profile</a>
-  <a md-button (click)="showMenu = showMenu? false: true" [routerLink]="['/user-profile', '1']">
-    <md-icon>logout</md-icon>Logout</a>
+  <button md-button (click)="logout(); showMenu = showMenu? false: true" *ngIf="auth | async">
+    <md-icon>door</md-icon>Logout</button>
+    <button md-button (click)="login(); showMenu = showMenu? false: true" *ngIf="!(auth | async)">
+      <md-icon>home</md-icon>Login</button>
 </nav>
 
 <router-outlet></router-outlet>

@@ -9,8 +9,7 @@ import { Router, ActivatedRoute,ROUTER_DIRECTIVES } from '@angular/router';
   directives: [ROUTER_DIRECTIVES]
 })
 export class GroupInvites {
-
-  // groups: FirebaseObjectObservable<any>;
+    // groups: FirebaseObjectObservable<any>;
     invites: FirebaseListObservable<any>;
     sub: any;
     constructor(private route: ActivatedRoute, private router: Router, af: AngularFire) {

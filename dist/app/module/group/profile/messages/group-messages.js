@@ -11,18 +11,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var angularfire2_1 = require('angularfire2');
 var router_1 = require('@angular/router');
+var index_1 = require('../../../shared/index');
 var GroupMessages = (function () {
-    function GroupMessages(route, router, af) {
+    function GroupMessages(route, router, af, _userService) {
         var _this = this;
         this.route = route;
         this.router = router;
+        this._userService = _userService;
         this.sub = this.route.params.subscribe(function (params) {
             var id = params['id']; // (+) converts string 'id' to a number
             _this.messages = af.database.list('groups/' + id + '/messages');
         });
     }
     GroupMessages.prototype.send = function () {
-        this.messages.push({ from: 1, message: this.message });
+        this.messages.push({ from: this._userService.getUID(), message: this.message });
         this.message = '';
     };
     GroupMessages = __decorate([
@@ -30,7 +32,7 @@ var GroupMessages = (function () {
             moduleId: module.id,
             templateUrl: 'group-messages.html'
         }), 
-        __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, angularfire2_1.AngularFire])
+        __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, angularfire2_1.AngularFire, index_1.UserService])
     ], GroupMessages);
     return GroupMessages;
 }());

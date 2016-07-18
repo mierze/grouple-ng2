@@ -1,4 +1,4 @@
 <section class="group-invites">
   <h1>Group Invites</h1>
-  <a md-button *ngFor="let group of invites | async" [routerLink]="['/group-profile', 1]">{{group.$key}}{{group.name}}</a>
+  <a md-button *ngFor="let group of invites | async" [routerLink]="['/group-profile', group.$key]">{{group.$key}}{{group.name}}</a>
 </section>

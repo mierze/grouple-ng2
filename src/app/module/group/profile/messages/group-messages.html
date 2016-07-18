@@ -1,11 +1,17 @@
 <section>
 
   <h1>Group Messages</h1>
-  <p *ngFor="let message of messages | async">
-    {{message.message}} <em>{{message.from}}</em>
-  </p>
+  <span *ngFor="let message of messages | async">
+    <p>
+      {{message.message}}
+    </p>
+    <em>From: {{message.from}}</em>
+  </span>
+  <div>
 
-  <input type="text" [(ngModel)]="message" />
-  <button (click)="send()">Send</button>
+    <input type="text" [(ngModel)]="message" />
+    <button (click)="send()">Send</button>
+  
+  </div>
 
 </section>

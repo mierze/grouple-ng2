@@ -1,10 +1,8 @@
 <div>
-    <!-- <sad-guy ng-show='vm.sadGuy'></sad-guy> -->
-
     <ul>
         <li *ngFor="let group of groups | async">
           {{group.$value}} {{(getName(group.$value) | async)?.name}}
-        <!-- <a md-button [routerLink]="['/group-profile', group.$key]">{{group.name}}</a> -->
+         <a md-button [routerLink]="['/group-profile', group.$key]">go to profile</a>
         </li>
     </ul>
 </div>

@@ -11,10 +11,10 @@
       <p>{{(user | async)?.about}}</p>
     </md-card-content>
     <md-card-actions>
-      <button md-button color="primary">Badges</button>
-      <button md-button color="primary">Groups</button>
-      <button md-button color="primary">Upcoming Events</button>
-      <button md-button color="primary">Edit Profile</button>
+      <a md-button color="primary" [routerLink]="['/badges']">Badges</a>
+      <a md-button color="primary" [routerLink]="['/group-list', uid]">Groups</a>
+      <a md-button color="primary">Upcoming Events</a>
+      <a md-button color="primary" [routerLink]="['/user-edit', uid]">Edit Profile</a>
     </md-card-actions>
   </md-card>
 

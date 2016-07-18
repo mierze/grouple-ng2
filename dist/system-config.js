@@ -49,8 +49,8 @@ var barrels = [
     'rxjs',
     // App specific barrels.
     'app',
-    'app/shared',
     'app/module',
+    'app/module/user/badges',
 ];
 var cliSystemConfigPackages = {};
 barrels.forEach(function (barrelName) {
